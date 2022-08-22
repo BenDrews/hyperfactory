@@ -10,3 +10,6 @@ mymake_files/
 hyper.res
 language-data.cpp
 autohdr.h
+
+# Log
+hyperrogue.log

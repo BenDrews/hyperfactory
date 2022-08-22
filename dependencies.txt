@@ -1,0 +1,12 @@
+# open "msys2 mingw64"
+# install deps
+pacman -S base-devel mingw-w64-x86_64-toolchain gcc vim cmake mingw-w64-x86_64-SDL mingw-w64-x86_64-SDL_mixer mingw-w64-x86_64-SDL_ttf mingw-w64-x86_64-SDL_gfx mingw-w64-x86_64-glew
+
+# set c export path
+export CPLUS_INCLUDE_PATH=/mingw64/include/c++/12.1.0:/mingw64/include:/mingw64/include/SDL
+
+# set include path in VSCode
+#
+# C:/msys64/mingw64/include/c++/12.1.0/*
+# C:/msys64/mingw64/include/SDL/*
+# C:/msys64/mingw64/include/*
