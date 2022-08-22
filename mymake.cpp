@@ -40,12 +40,15 @@ bool mingw64 = false;
 
 int sdlver = 1;
 
+
 int mysystem(string cmdline) {
   if(verbose) {
     printf("%s\n", cmdline.c_str());
     }
-  if (mingw64)
-    cmdline = "sh -c '" + cmdline + "'"; // because system(arg) passes arg to cmd.exe on MinGW
+  if (mingw64) {
+    // keep the window open if compile error
+    cmdline = "sh -c '" + cmdline + "; if [ $? -ne 0 ]; then cmd /k; fi'"; // because system(arg) passes arg to cmd.exe on MinGW
+  }
   return system(cmdline.c_str());
   }
 
