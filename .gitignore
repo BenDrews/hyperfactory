@@ -1,1 +1,12 @@
+# Default
 .deps/
+.vscode
+.DS_Store
+
+# Generated files
+*.exe
+*.o
+mymake_files/
+hyper.res
+language-data.cpp
+autohdr.h
